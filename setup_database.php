@@ -40,6 +40,8 @@ if ($conn->query($sql) === TRUE) {
     echo "Customers table created successfully<br>";
 } else {
     echo "Error creating customers table: " . $conn->error . "<br>";
+}
+
 $sql = "CREATE TABLE IF NOT EXISTS contact_messages (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
