@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Lemayan Fashion House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/kenyan-logo.jpg" alt="Lemayan Fashion House Logo" class="logo">
+        <h1>Lemayan Fashion House</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="register.html" class="active">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Register as Our Customer</h2>
+        <p>Register to get exclusive news and special price offers!</p>
+        
+        <div class="register-form">
+            <form id="registrationForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="location">Where do you live:</label>
+                <input type="text" id="location" name="location" placeholder="Example: Lemayan, Nairobi" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Choose your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="interests">What type of clothes do you like:</label>
+                <textarea id="interests" name="interests" rows="3" placeholder="Example: Kitenge, Dashiki, traditional clothes..."></textarea>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    <label for="newsletter">I want to receive news about new products and special offers</label>
+                </div>
+                
+                <button type="submit">Register Now</button>
+            </form>
+        </div>
+        
+        <div class="benefits">
+            <h3>Benefits of Registering:</h3>
+            <ul>
+                <li>Get first news about new products</li>
+                <li>Special discounts for registered customers</li>
+                <li>Monthly special price offers</li>
+                <li>Free styling advice</li>
+                <li>Faster service</li>
+            </ul>
+        </div>
+        
+        <div id="registrationMessage" style="display: none;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lemayan Fashion House. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const customerData = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                location: formData.get('location'),
+                age: formData.get('age'),
+                gender: formData.get('gender'),
+                interests: formData.get('interests'),
+                newsletter: formData.get('newsletter') ? true : false,
+                registrationDate: new Date().toISOString()
+            };
+            
+            // Save to localStorage (simple database)
+            let customers = JSON.parse(localStorage.getItem('customers') || '[]');
+            customers.push(customerData);
+            localStorage.setItem('customers', JSON.stringify(customers));
+            
+            // Show success message
+            const messageDiv = document.getElementById('registrationMessage');
+            messageDiv.innerHTML = '<p style="color: green; padding: 10px; background: #e8f5e8; border-radius: 5px;">Thank you! You have registered successfully. We will call you or send you an email soon.</p>';
+            messageDiv.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Products - Lemayan Fashion House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/kenyan-logo.jpg" alt="Lemayan Fashion House" width="50" height="50">
+                <span>Lemayan Fashion House</span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="page-title">
+            <h1>Our Kenyan Fashion Products</h1>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="showAll()">All Products</button>
+                <button class="filter-btn" onclick="showCategory('men')">Men's Wear</button>
+                <button class="filter-btn" onclick="showCategory('women')">Women's Wear</button>
+                <button class="filter-btn" onclick="showCategory('children')">Children's Wear</button>
+            </div>
+        </div>
+
+        <!-- Men's Products -->
+        <div class="products-section" id="men">
+            <h2>Men's Wear</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="men">
+                    <img src="images/men-dashiki.jpg" alt="Men's Dashiki">
+                    <h3>Traditional Dashiki</h3>
+                    <p>Beautiful African print dashiki shirt</p>
+                    <div class="product-price">KSh 2,500</div>
+                </div>
+                
+                <div class="product-card" data-category="men">
+                    <img src="images/men-suit-kenyan.jpg" alt="Kenyan Business Suit">
+                    <h3>Kenyan Business Suit</h3>
+                    <p>Modern suit with African touch</p>
+                    <div class="product-price">KSh 8,500</div>
+                </div>
+                
+                <div class="product-card" data-category="men">
+                    <img src="images/men-casual-kenya.jpg" alt="Casual Shirt">
+                    <h3>Casual African Print Shirt</h3>
+                    <p>Comfortable casual shirt</p>
+                    <div class="product-price">KSh 1,800</div>
+                </div>
+                
+                <div class="product-card" data-category="men">
+                    <img src="images/men-traditional.jpg" alt="Traditional Wear">
+                    <h3>Traditional Kikuyu Wear</h3>
+                    <p>Traditional Kenyan men's outfit</p>
+                    <div class="product-price">KSh 4,200</div>
+                </div>
+                
+                <div class="product-card" data-category="men">
+                    <img src="images/men-kitenge.jpg" alt="Kitenge Shirt">
+                    <h3>Kitenge Shirt</h3>
+                    <p>Stylish kitenge print shirt</p>
+                    <div class="product-price">KSh 2,200</div>
+                </div>
+                
+                <div class="product-card" data-category="men">
+                    <img src="images/men-safari.jpg" alt="Safari Jacket">
+                    <h3>Safari Jacket</h3>
+                    <p>Classic Kenyan safari jacket</p>
+                    <div class="product-price">KSh 3,800</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Products -->
+        <div class="products-section" id="women">
+            <h2>Women's Wear</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="women">
+                    <img src="images/women-kanga.jpg" alt="Kanga Dress">
+                    <h3>Beautiful Kanga Dress</h3>
+                    <p>Traditional kanga fabric dress</p>
+                    <div class="product-price">KSh 3,200</div>
+                </div>
+                
+                <div class="product-card" data-category="women">
+                    <img src="images/women-kitenge-dress.jpg" alt="Kitenge Dress">
+                    <h3>Kitenge Evening Dress</h3>
+                    <p>Elegant kitenge evening wear</p>
+                    <div class="product-price">KSh 4,500</div>
+                </div>
+                
+                <div class="product-card" data-category="women">
+                    <img src="images/women-ankara.jpg" alt="Ankara Dress">
+                    <h3>Ankara Print Dress</h3>
+                    <p>Modern ankara print design</p>
+                    <div class="product-price">KSh 3,800</div>
+                </div>
+                
+                <div class="product-card" data-category="women">
+                    <img src="images/women-traditional.jpg" alt="Traditional Dress">
+                    <h3>Traditional Kenyan Dress</h3>
+                    <p>Authentic Kenyan traditional wear</p>
+                    <div class="product-price">KSh 5,200</div>
+                </div>
+                
+                <div class="product-card" data-category="women">
+                    <img src="images/women-blouse.jpg" alt="African Blouse">
+                    <h3>African Print Blouse</h3>
+                    <p>Casual African print top</p>
+                    <div class="product-price">KSh 2,800</div>
+                </div>
+                
+                <div class="product-card" data-category="women">
+                    <img src="images/women-skirt.jpg" alt="Kitenge Skirt">
+                    <h3>Kitenge Skirt</h3>
+                    <p>Colorful kitenge wrap skirt</p>
+                    <div class="product-price">KSh 2,500</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Children's Products -->
+        <div class="products-section" id="children">
+            <h2>Children's Wear</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="children">
+                    <img src="images/kids-dashiki.jpg" alt="Kids Dashiki">
+                    <h3>Kids Dashiki Set</h3>
+                    <p>Cute dashiki outfit for children</p>
+                    <div class="product-price">KSh 1,500</div>
+                </div>
+                
+                <div class="product-card" data-category="children">
+                    <img src="images/kids-dress-african.jpg" alt="African Kids Dress">
+                    <h3>African Print Dress</h3>
+                    <p>Beautiful dress for little girls</p>
+                    <div class="product-price">KSh 1,800</div>
+                </div>
+                
+                <div class="product-card" data-category="children">
+                    <img src="images/kids-shorts-set.jpg" alt="Kids Shorts Set">
+                    <h3>African Print Shorts Set</h3>
+                    <p>Comfortable shorts and shirt set</p>
+                    <div class="product-price">KSh 1,200</div>
+                </div>
+                
+                <div class="product-card" data-category="children">
+                    <img src="images/kids-traditional.jpg" alt="Traditional Kids Wear">
+                    <h3>Traditional Kids Outfit</h3>
+                    <p>Traditional Kenyan children's wear</p>
+                    <div class="product-price">KSh 2,200</div>
+                </div>
+                
+                <div class="product-card" data-category="children">
+                    <img src="images/kids-casual.jpg" alt="Kids Casual Wear">
+                    <h3>Casual Play Clothes</h3>
+                    <p>Comfortable everyday wear</p>
+                    <div class="product-price">KSh 1,000</div>
+                </div>
+                
+                <div class="product-card" data-category="children">
+                    <img src="images/kids-party.jpg" alt="Kids Party Dress">
+                    <h3>Party Dress</h3>
+                    <p>Special occasion dress</p>
+                    <div class="product-price">KSh 2,500</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/kenyan-logo.jpg" alt="Lemayan Fashion House Logo" class="logo-img">
+                        <span class="logo-text">Lemayan Fashion House</span>
+                    </div>
+                    <p>Best Kenyan Fashion in Nairobi. Proudly Kenyan Fashion for All.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#men">Men's Wear</a></li>
+                        <li><a href="#women">Women's Wear</a></li>
+                        <li><a href="#children">Children's Wear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p>Lemayan Road, Nairobi, Kenya</p>
+                        <p>+254 700 123 456</p>
+                        <p>info@lemayan.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lemayan Fashion House. Made in Kenya with love</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
